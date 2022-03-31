@@ -31,7 +31,7 @@ RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubu
     
 ##### Install R packages that are required ######
 ## CRAN packages
-RUN R -e "install.packages(c('shiny','shinydashboard','dplyr','ggplot2'))"
+RUN R -e "install.packages(c('shiny','shinydashboard','dplyr','ggplot2','datasets'))"
 
 
 # Copy configuration files into the Docker image
