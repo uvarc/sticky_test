@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
     libtiff5-dev \
     libjpeg-dev \
     libgdal-dev \
-    xdg-utils
+    xdg-utils \
     git             
     
 # Install Shiny server
