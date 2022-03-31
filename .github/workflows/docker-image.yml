@@ -31,7 +31,7 @@ jobs:
       with:
         push: true
         no-cache: false
-        tags: ghcr.io/uvarc/sticky_test:latest
+        tags: ghcr.io/uvarc/sticky-test:latest
     -
       name: Image digest
       run: echo $${{ steps.docker_build.outputs.digest }}
@@ -52,4 +52,4 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.DCOS_AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.DCOS_AWS_SECRET_ACCESS_KEY }}
         AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
-      run: aws sqs send-message --queue-url 'https://queue.amazonaws.com/474683445819/dcos-refresh' --message-body '/uvarc/sticky_test' || exit 1;
+      run: aws sqs send-message --queue-url 'https://queue.amazonaws.com/474683445819/dcos-refresh' --message-body '/uvarc/sticky-test' || exit 1;
